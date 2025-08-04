@@ -33,13 +33,13 @@ public class BungRepository {
     }
 
     // Update: 붕어빵 정보 수정
-    public Optional<Bung> update(Long id, Bung updatedbung) {
-        return findById(id).map(existingbung -> {
-            existingbung.setType(updatedbung.getType());
-            existingbung.setPrice(updatedbung.getPrice());
-            existingbung.setName(updatedbung.getName());
-            existingbung.setQuantity(updatedbung.getQuantity());
-            return existingbung;
+    public Optional<Bung> update(Long id, Bung updatedBung) {
+        return findById(id).map(existingBung -> {
+            existingBung.setType(updatedBung.getType());
+            existingBung.setPrice(updatedBung.getPrice());
+            existingBung.setName(updatedBung.getName());
+            existingBung.setQuantity(updatedBung.getQuantity());
+            return existingBung;
         });
     }
 
